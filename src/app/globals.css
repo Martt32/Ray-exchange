@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+.hero{
+  position: relative;
+}
+.hero::before{
+ content:'';
+ position: absolute;
+ top:0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background:rgb(0, 20, 14) ;
+ background-size: cover;
+ opacity:1;
+ z-index:-1;
+
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
